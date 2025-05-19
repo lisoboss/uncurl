@@ -7,10 +7,13 @@ authors = [
     { name = "lisoboss", email = "37949544+lisoboss@users.noreply.github.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "requests>=2.32.3",
+]
 
 [project.scripts]
 uncurl = "uncurl:main"
+tuncurl = "uncurl:main_request"
 
 [build-system]
 requires = ["hatchling", "hatch-vcs"]
@@ -18,3 +21,6 @@ build-backend = "hatchling.build"
 
 [tool.hatch.version]
 source = "vcs"
+
+[tool.uv.workspace]
+members = ["qqqqq"]
